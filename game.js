@@ -7,14 +7,8 @@ let frames = 0;
 const sprite = new Image();
 sprite.src = "img/sprite.png";
 
-const state = {
-  current: 0,
-  getReady: 0,
-  game: 1,
-  over: 2
-};
+//BACKGROUND
 
-// BACKGROUND
 const bg = {
   sX: 0,
   sY: 0,
@@ -35,7 +29,6 @@ const bg = {
       this.w,
       this.h
     );
-
     ctx.drawImage(
       sprite,
       this.sX,
@@ -50,10 +43,17 @@ const bg = {
   }
 };
 
-function draw() {}
-//Need to clear the canvas each time we update the game
-ctx.fillStyle = "#70c5ce";
-ctx.fillRect(0, 0, cvs.clientWidth, cvs.height);
+// BACKGROUND
+
+function draw() {
+  //Need to clear the canvas each time we update the game
+  ctx.fillStyle = "#70c5ce";
+  ctx.fillRect(0, 0, cvs.width, cvs.height);
+}
+
+//UPDATE
+function update() {}
+
 function loop() {
   update();
   draw();

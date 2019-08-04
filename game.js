@@ -7,6 +7,13 @@ let frames = 0;
 const sprite = new Image();
 sprite.src = "img/sprite.png";
 
+const state = {
+  current: 0,
+  getReady: 0,
+  game: 1,
+  over: 2
+};
+
 function draw() {}
 //Need to clear the canvas each time we update the game
 ctx.fillStyle = "#70c5ce";
